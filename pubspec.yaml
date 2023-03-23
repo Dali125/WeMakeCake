@@ -40,6 +40,13 @@ dependencies:
   firebase_auth:
   cloud_firestore:
   page_route_animator: ^1.0.3
+  rive: ^0.9.1
+  animated_splash_screen:
+  animated_size_and_fade:
+  page_transition: "^2.0.9"
+  delayed_display:
+  image_picker: ^0.8.5
+  file_picker:
 
 dev_dependencies:
   flutter_test:
@@ -65,8 +72,12 @@ flutter:
 
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/RivFiles/cute_cake.riv
+    - assets/RivFiles/cute.riv
+    - assets/RivFiles/cute1.riv
+    - assets/CakeC.png
+    - assets/cake_type/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

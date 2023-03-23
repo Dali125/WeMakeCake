@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/webview/web_posts.dart';
+import '../Global/cake_add.dart';
 class WebHome extends StatefulWidget {
   const WebHome({Key? key}) : super(key: key);
 
@@ -36,7 +38,7 @@ class _WebHomeState extends State<WebHome> {
                   });
                 },
                 destinations: [
-                  NavigationRailDestination(icon: Icon(Icons.person), label: Text('Cake',style: TextStyle(color: Colors.black),),),
+                  NavigationRailDestination(icon: Icon(Icons.cake_outlined), label: Text('Cake',style: TextStyle(color: Colors.black),),),
                   NavigationRailDestination(icon: Icon(Icons.cake_outlined), label: Text('Cake')),
                   NavigationRailDestination(icon: Icon(Icons.cake_outlined), label: Text('Cake')),
                   NavigationRailDestination(icon: Icon(Icons.cake_outlined), label: Text('Cake')),
@@ -50,6 +52,43 @@ class _WebHomeState extends State<WebHome> {
               height: height,
               width: width,
               color: Colors.red,
+              child: Scaffold(
+                
+                
+                
+                
+                body: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+
+                      color: Colors.deepPurple[20],
+                      width: width,
+                      height: 50,
+                      child: Image.asset('assets/CakeC.png'),
+                    ),
+                    Container(height: 400,
+                      width: width,
+                    child: WebPosts(),
+                    color: Colors.deepPurple,)
+                    
+                    
+                    
+                  ],
+                ),
+
+
+
+
+                floatingActionButton: FloatingActionButton(onPressed: () {
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => CakeAdd()));
+                },
+                  child: Icon(Icons.add),
+
+                ),
+              ),
             )
 
 
@@ -57,6 +96,7 @@ class _WebHomeState extends State<WebHome> {
 
 
           ],
+
         );
   }
 }

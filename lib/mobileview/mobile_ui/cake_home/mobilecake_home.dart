@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_route_animator/page_route_animator.dart';
 import 'package:untitled/Global/colors/ui_web_constant_index.dart';
+import 'package:untitled/Global/my_text_guides.dart';
 
 import '../../../Global/posts.dart';
 import '../../../Global/searchbarr.dart';
@@ -28,7 +29,7 @@ class _TrueHomeState extends State<TrueHome> {
 
             snap: true,
             floating: true,
-            expandedHeight: 80,
+            expandedHeight: 120,
 
             flexibleSpace:
 
@@ -70,7 +71,17 @@ class _TrueHomeState extends State<TrueHome> {
 
           SliverToBoxAdapter(
 
-            child: Posts(),
+            child:
+
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+
+                TextGuide(text: 'Categories', fontsize: 30,weight: FontWeight.bold,),
+                Posts(),
+              ],
+            ),
           )
 
 

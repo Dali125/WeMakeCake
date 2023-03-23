@@ -61,8 +61,11 @@ List<BottomNavigationBarItem> tabs = [
 
 
 
+
           SliverToBoxAdapter(
+
             child: Tabs[index],
+
           )
         ],
       ),
